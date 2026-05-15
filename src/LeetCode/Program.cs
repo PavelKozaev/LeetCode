@@ -15,6 +15,16 @@
 
 
 
-var s = "A man, a plan, a canal: Panama";
+// var s = "A man, a plan, a canal: Panama";
+//
+// Console.WriteLine(TwoPointers.IsPalindrome(s));
 
-Console.WriteLine(TwoPointers.IsPalindrome(s));
+
+
+
+var nums1 = new[] { 1, 2, 3, 0, 0, 0 };
+var m = 3;
+var nums2 = new[] { 2, 5, 6 };
+var n = 3;
+
+TwoPointers.Merge(nums1, m, nums2, n);
