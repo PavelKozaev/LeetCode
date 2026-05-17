@@ -32,7 +32,14 @@
 
 
 
-var nums1 = new[] { 1, 2, 2, 1 };
-var nums2 = new[] { 2, 2 };
+// var nums1 = new[] { 1, 2, 2, 1 };
+// var nums2 = new[] { 2, 2 };
+//
+// TwoPointers.Intersection(nums1, nums2);
 
-TwoPointers.Intersection(nums1, nums2);
+
+
+
+var nums = new[] { -4, -1, 0, 3, 10 };
+
+TwoPointers.SortedSquares(nums);

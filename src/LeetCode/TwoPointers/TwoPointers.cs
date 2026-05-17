@@ -16,6 +16,7 @@ public static class TwoPointers
         }
     }
 
+    
     public static bool IsPalindrome(string s)
     {
         var left = 0;
@@ -44,6 +45,7 @@ public static class TwoPointers
 
         return true;
     }
+    
     
     public static void Merge(int[] nums1, int m, int[] nums2, int n)
     {
@@ -75,6 +77,7 @@ public static class TwoPointers
         }
     }
 
+    
     public static int[] Intersection(int[] nums1, int[] nums2)
     {
         Array.Sort(nums1);
@@ -108,5 +111,36 @@ public static class TwoPointers
         }
         
         return result.ToArray();
+    }
+    
+    
+    public static int[] SortedSquares(int[] nums)
+    {
+        var result = new int[nums.Length];
+
+        var left = 0;
+        var right = nums.Length - 1;
+        var pos = nums.Length - 1;
+
+        while (left <= right)
+        {
+            var leftSquare = nums[left] * nums[left];
+            var rightSquare = nums[right] * nums[right];
+            
+            if (leftSquare >= rightSquare)
+            {
+                result[pos] = leftSquare;
+                left++;
+            }
+            else
+            {
+                result[pos] = rightSquare;
+                right--;
+            }
+
+            pos--;
+        }
+
+        return result;
     }
 }
