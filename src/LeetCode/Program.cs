@@ -1,5 +1,6 @@
 ﻿using LeetCode.TwoPointers;
 
+// ReverseString
 // var s = new[] {'h', 'e', 'l', 'l', 'o'};
 // var t = new[] {'H', 'a', 'n', 'n', 'a', 'h'};
 //
@@ -14,14 +15,14 @@
 
 
 
-
+// IsPalindrome
 // var s = "A man, a plan, a canal: Panama";
 //
 // Console.WriteLine(TwoPointers.IsPalindrome(s));
 
 
 
-
+// Merge
 // var nums1 = new[] { 1, 2, 3, 0, 0, 0 };
 // var m = 3;
 // var nums2 = new[] { 2, 5, 6 };
@@ -31,7 +32,7 @@
 
 
 
-
+// Intersection
 // var nums1 = new[] { 1, 2, 2, 1 };
 // var nums2 = new[] { 2, 2 };
 //
@@ -39,7 +40,7 @@
 
 
 
-
+// SortedSquares
 var nums = new[] { -4, -1, 0, 3, 10 };
 
 TwoPointers.SortedSquares(nums);
