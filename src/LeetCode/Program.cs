@@ -41,6 +41,13 @@
 
 
 // SortedSquares
-var nums = new[] { -4, -1, 0, 3, 10 };
+// var nums = new[] { -4, -1, 0, 3, 10 };
+//
+// TwoPointers.SortedSquares(nums);
 
-TwoPointers.SortedSquares(nums);
+
+
+// RemoveDuplicates
+var nums = new[] { 1, 1, 2 };
+
+TwoPointers.RemoveDuplicates(nums);

@@ -143,4 +143,29 @@ public static class TwoPointers
 
         return result;
     }
+    
+    
+    public static int RemoveDuplicates(int[] nums)
+    {
+        if (nums.Length == 0)
+        {
+            return 0;
+        }
+        
+        var reader = 1;
+        var writer = 1;
+
+        while (reader < nums.Length)
+        {
+            if (nums[reader] != nums[writer - 1])
+            {
+                nums[writer] = nums[reader];
+                writer++;
+            }
+            
+            reader++;
+        }
+
+        return writer;
+    }
 }
