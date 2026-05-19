@@ -168,4 +168,22 @@ public static class TwoPointers
 
         return writer;
     }
+    
+    
+    public static void MoveZeroes(int[] nums)
+    {
+        var slow = 0;
+        var fast = 0;
+
+        while (fast < nums.Length)
+        {
+            if (nums[fast] != 0)
+            {
+                (nums[slow], nums[fast]) = (nums[fast], nums[slow]);
+                slow++;
+            }
+
+            fast++;
+        }
+    }
 }

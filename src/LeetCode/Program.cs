@@ -48,6 +48,12 @@
 
 
 // RemoveDuplicates
-var nums = new[] { 1, 1, 2 };
+// var nums = new[] { 1, 1, 2 };
+//
+// TwoPointers.RemoveDuplicates(nums);
 
-TwoPointers.RemoveDuplicates(nums);
+
+// MoveZeroes
+var nums = new[] { 0,1,0,3,12 };
+
+TwoPointers.MoveZeroes(nums);
