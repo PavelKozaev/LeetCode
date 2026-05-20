@@ -1,5 +1,8 @@
 ﻿using LeetCode.TwoPointers;
 
+// TwoPointers
+
+
 // ReverseString
 // var s = new[] {'h', 'e', 'l', 'l', 'o'};
 // var t = new[] {'H', 'a', 'n', 'n', 'a', 'h'};
@@ -53,7 +56,16 @@
 // TwoPointers.RemoveDuplicates(nums);
 
 
-// MoveZeroes
-var nums = new[] { 0,1,0,3,12 };
 
-TwoPointers.MoveZeroes(nums);
+// MoveZeroes
+// var nums = new[] { 0,1,0,3,12 };
+//
+// TwoPointers.MoveZeroes(nums);
+
+
+
+// TwoSum
+var numbers = new[] { 2, 7, 11, 15 };
+var target = 9;
+
+TwoPointers.TwoSum(numbers, target);
