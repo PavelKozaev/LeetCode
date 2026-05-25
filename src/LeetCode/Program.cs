@@ -7,21 +7,15 @@
 // var s = new[] {'h', 'e', 'l', 'l', 'o'};
 // var t = new[] {'H', 'a', 'n', 'n', 'a', 'h'};
 //
-// Console.WriteLine(s);
-// Console.WriteLine(t);
-//
 // TwoPointers.ReverseString(s);
 // TwoPointers.ReverseString(t);
-//
-// Console.WriteLine(s);
-// Console.WriteLine(t);
 
 
 
 // IsPalindrome
 // var s = "A man, a plan, a canal: Panama";
 //
-// Console.WriteLine(TwoPointers.IsPalindrome(s));
+// TwoPointers.IsPalindrome(s);
 
 
 
@@ -65,7 +59,14 @@
 
 
 // TwoSum
-var numbers = new[] { 2, 7, 11, 15 };
-var target = 9;
+// var numbers = new[] { 2, 7, 11, 15 };
+// var target = 9;
+//
+// TwoPointers.TwoSum(numbers, target);
 
-TwoPointers.TwoSum(numbers, target);
+
+
+// ThreeSum
+var nums = new[] { -1, 0, 1, 2, -1, -4 };
+
+TwoPointers.ThreeSum(nums);
