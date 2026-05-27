@@ -67,6 +67,13 @@
 
 
 // ThreeSum
-var nums = new[] { -1, 0, 1, 2, -1, -4 };
+// var nums = new[] { -1, 0, 1, 2, -1, -4 };
+//
+// TwoPointers.ThreeSum(nums);
 
-TwoPointers.ThreeSum(nums);
+
+
+// Compress
+var chars = new[] {'a', 'a', 'b', 'b', 'c', 'c', 'c' };
+
+TwoPointers.Compress(chars);

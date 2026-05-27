@@ -267,4 +267,32 @@ public static class TwoPointers
 
         return result;
     }
+
+
+    public static int Compress(char[] chars)
+    {
+        var write = 0;
+
+        for (int read = 0, count = 0; read < chars.Length; read++)
+        {
+            count++;
+
+            if (read == chars.Length - 1 || chars[read] != chars[read + 1])
+            {
+                chars[write++] = chars[read];
+
+                if (count > 1)
+                {
+                    foreach (var c in count.ToString())
+                    {
+                        chars[write++] = c;
+                    }
+                }
+
+                count = 0;
+            }
+        }
+        
+        return write;
+    }
 }
