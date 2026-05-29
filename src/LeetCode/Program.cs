@@ -74,6 +74,14 @@
 
 
 // Compress
-var chars = new[] {'a', 'a', 'b', 'b', 'c', 'c', 'c' };
+// var chars = new[] {'a', 'a', 'b', 'b', 'c', 'c', 'c' };
+//
+// TwoPointers.Compress(chars);
 
-TwoPointers.Compress(chars);
+
+
+// CompareVersion
+var version1 = "1.2";
+var version2 = "1.10";
+
+TwoPointers.CompareVersion(version1, version2);
