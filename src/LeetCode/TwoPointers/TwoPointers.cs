@@ -326,4 +326,22 @@ public static class TwoPointers
         
         return 0;
     }
+
+    
+    public static int MaxArea(int[] height)
+    {
+        int max = 0, left = 0, right = height.Length - 1;
+
+        while (left < right)
+        {
+            var temp = (right - left) * Math.Min(height[left], height[right]);
+
+            max = Math.Max(max, temp);
+
+            if (height[left] < height[right]) left++;
+            else right--;
+        }
+        
+        return max;
+    }
 }

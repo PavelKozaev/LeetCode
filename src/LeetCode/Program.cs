@@ -81,7 +81,14 @@
 
 
 // CompareVersion
-var version1 = "1.2";
-var version2 = "1.10";
+// var version1 = "1.2";
+// var version2 = "1.10";
+//
+// TwoPointers.CompareVersion(version1, version2);
 
-TwoPointers.CompareVersion(version1, version2);
+
+
+// MaxArea
+var height = new[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+
+TwoPointers.MaxArea(height);
