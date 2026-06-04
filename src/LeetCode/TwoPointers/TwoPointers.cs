@@ -344,4 +344,30 @@ public static class TwoPointers
         
         return max;
     }
+    
+    
+    public static string ReverseVowels(string s)
+    {
+        var result = s.ToCharArray();
+
+        int left = 0, right = s.Length - 1;
+        
+        var vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+
+        while (left < right)
+        {
+            while (left < right && !vowels.Contains(result[left])) left++;
+            
+            while (left < right && !vowels.Contains(result[right])) right--;
+
+            if (left < right)
+            {
+                (result[left], result[right]) = (result[right], result[left]);
+                left++;
+                right--;
+            }
+        }
+
+        return new string(result);
+    }
 }

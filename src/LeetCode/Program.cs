@@ -89,6 +89,13 @@
 
 
 // MaxArea
-var height = new[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+// var height = new[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+//
+// TwoPointers.MaxArea(height);
 
-TwoPointers.MaxArea(height);
+
+
+// ReverseVowels
+var s = "IceCreAm";
+
+TwoPointers.ReverseVowels(s);
