@@ -96,6 +96,13 @@
 
 
 // ReverseVowels
-var s = "IceCreAm";
+// var s = "IceCreAm";
+//
+// TwoPointers.ReverseVowels(s);
 
-TwoPointers.ReverseVowels(s);
+
+
+// ReverseOnlyLetters
+var s = "ab-cd";
+
+TwoPointers.ReverseOnlyLetters(s);

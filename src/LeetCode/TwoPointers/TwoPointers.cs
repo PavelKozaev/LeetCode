@@ -370,4 +370,28 @@ public static class TwoPointers
 
         return new string(result);
     }
+
+    
+    public static string ReverseOnlyLetters(string s)
+    {
+        var arr = s.ToCharArray();
+        
+        int left = 0, right = s.Length - 1;
+
+        while (left < right)
+        {
+            while (left < right && !char.IsLetter(arr[left])) left++;
+            
+            while (left < right && !char.IsLetter(arr[right])) right--;
+
+            if (left < right)
+            {
+                (arr[left], arr[right]) = (arr[right], arr[left]);
+                left++;
+                right--;
+            }
+        }
+        
+        return new string(arr);
+    }
 }
