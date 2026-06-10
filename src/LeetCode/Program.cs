@@ -103,6 +103,13 @@
 
 
 // ReverseOnlyLetters
-var s = "ab-cd";
+// var s = "ab-cd";
+//
+// TwoPointers.ReverseOnlyLetters(s);
 
-TwoPointers.ReverseOnlyLetters(s);
+
+
+// IsLongPressedName
+string name = "alex", typed = "aaleex";
+
+TwoPointers.IsLongPressedName(name, typed);
