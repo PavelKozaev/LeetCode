@@ -110,6 +110,13 @@
 
 
 // IsLongPressedName
-string name = "alex", typed = "aaleex";
+// string name = "alex", typed = "aaleex";
+//
+// TwoPointers.IsLongPressedName(name, typed);
 
-TwoPointers.IsLongPressedName(name, typed);
+
+
+// DuplicateZeroes
+var arr = new[] { 1, 0, 2, 3, 0, 4, 5, 0};
+
+TwoPointers.DuplicateZeros(arr);

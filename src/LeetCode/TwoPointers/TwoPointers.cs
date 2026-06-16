@@ -413,4 +413,43 @@ public static class TwoPointers
         
         return i == name.Length;
     }
+
+
+    public static void DuplicateZeros(int[] arr)
+    {
+        var n = arr.Length;
+        var zeros = 0;
+        var last = n - 1;
+
+        for (var i = 0; i <= last-zeros; i++)
+        {
+            if (arr[i] == 0)
+            {
+                if (i == n - 1 - zeros)
+                {
+                    arr[n - 1] = 0;
+                    last--;
+                    break;
+                }
+                
+                zeros++;
+            }
+        }
+
+        int writeIdx = last - zeros;
+
+        for (var i = writeIdx; i >= 0; i--)
+        {
+            if (arr[i] == 0)
+            {
+                arr[i + zeros] = 0;
+                zeros--;
+                arr[i + zeros] = 0;
+            }
+            else
+            {
+                arr[i + zeros] = arr[i];
+            }
+        }
+    }
 }
