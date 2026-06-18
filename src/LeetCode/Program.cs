@@ -117,6 +117,13 @@
 
 
 // DuplicateZeroes
-var arr = new[] { 1, 0, 2, 3, 0, 4, 5, 0};
+// var arr = new[] { 1, 0, 2, 3, 0, 4, 5, 0};
+//
+// TwoPointers.DuplicateZeros(arr);
 
-TwoPointers.DuplicateZeros(arr);
+
+
+// SortArrayByParity
+var nums = new[] { 3, 2, 1, 4 };
+
+TwoPointers.SortArrayByParity(nums);
