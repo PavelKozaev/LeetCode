@@ -480,24 +480,48 @@ public static class TwoPointers
     }
 
 
+    // public static void SortColors(int[] nums)
+    // {
+    //     int red = 0, white = 0, blue = 0;
+    //
+    //     foreach (var item in nums)
+    //     {
+    //         if (item == 0) red++;
+    //         else if (item == 1) white++;
+    //         else blue++;
+    //     }
+    //     
+    //     for (int i = 0; i < red; i++)
+    //         nums[i] = 0;
+    //     
+    //     for (int i = red; i < red + white; i++)
+    //         nums[i] = 1;
+    //     
+    //     for (int i = red + white; i < red + white + blue; i++)
+    //         nums[i] = 2;
+    // }
+    
     public static void SortColors(int[] nums)
     {
-        int red = 0, white = 0, blue = 0;
+        int low = 0, mid = 0, high = nums.Length - 1;
 
-        foreach (var item in nums)
+        while (mid <= high)
         {
-            if (item == 0) red++;
-            else if (item == 1) white++;
-            else blue++;
+            if (nums[mid] == 2)
+            {
+                (nums[mid], nums[high]) = (nums[high], nums[mid]);
+                high--;
+            }
+            else if (nums[mid] == 0)
+            {
+                (nums[mid], nums[low]) = (nums[low], nums[mid]);
+                low++;
+                mid++;
+            }
+            else
+            {
+                mid++;
+            }
         }
-        
-        for (int i = 0; i < red; i++)
-            nums[i] = 0;
-        
-        for (int i = red; i < red + white; i++)
-            nums[i] = 1;
-        
-        for (int i = red + white; i < red + white + blue; i++)
-            nums[i] = 2;
     }
 }
