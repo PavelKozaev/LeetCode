@@ -124,6 +124,13 @@
 
 
 // SortArrayByParity
-var nums = new[] { 3, 2, 1, 4 };
+// var nums = new[] { 3, 2, 1, 4 };
+//
+// TwoPointers.SortArrayByParity(nums);
 
-TwoPointers.SortArrayByParity(nums);
+
+
+// SortColors
+var nums = new[] { 2, 0, 2, 1, 1, 0 };
+
+TwoPointers.SortColors(nums);
