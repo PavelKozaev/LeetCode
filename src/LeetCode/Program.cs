@@ -131,6 +131,14 @@
 
 
 // SortColors
-var nums = new[] { 2, 0, 2, 1, 1, 0 };
+// var nums = new[] { 2, 0, 2, 1, 1, 0 };
+//
+// TwoPointers.SortColors(nums);
 
-TwoPointers.SortColors(nums);
+
+
+// ThreeSumClosest
+var nums = new[] { -1, 2, 1, -4 };
+var target = 1;
+
+TwoPointers.ThreeSumClosest(nums, target);

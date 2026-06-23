@@ -491,13 +491,13 @@ public static class TwoPointers
     //         else blue++;
     //     }
     //     
-    //     for (int i = 0; i < red; i++)
+    //     for (var i = 0; i < red; i++)
     //         nums[i] = 0;
     //     
-    //     for (int i = red; i < red + white; i++)
+    //     for (var i = red; i < red + white; i++)
     //         nums[i] = 1;
     //     
-    //     for (int i = red + white; i < red + white + blue; i++)
+    //     for (var i = red + white; i < red + white + blue; i++)
     //         nums[i] = 2;
     // }
     
@@ -523,5 +523,47 @@ public static class TwoPointers
                 mid++;
             }
         }
+    }
+
+
+    public static int ThreeSumClosest(int[] nums, int target)
+    {
+        Array.Sort(nums);
+        
+        var closestSum = nums[0] + nums[1] + nums[2];
+        var minDiff = int.MaxValue;
+
+        for (var i = 0; i < nums.Length - 2; i++)
+        {
+            int left = i + 1, right = nums.Length - 1;
+            
+            while (left < right)
+            {
+                var currentSum = nums[i] + nums[left] + nums[right];
+
+                if (currentSum == target)
+                {
+                    return currentSum;
+                }
+                
+                var currentDiff = Math.Abs(currentSum - target);
+                if (currentDiff < minDiff)
+                {
+                    minDiff = currentDiff;
+                    closestSum = currentSum;
+                }
+
+                if (currentSum < target)
+                {
+                    left++;
+                }
+                else
+                {
+                    right--;
+                }
+            }
+        }
+        
+        return closestSum;
     }
 }
