@@ -531,10 +531,26 @@ public static class TwoPointers
         Array.Sort(nums);
         
         var closestSum = nums[0] + nums[1] + nums[2];
+        
+        if (closestSum >= target)
+            return closestSum;
+        
         var minDiff = int.MaxValue;
 
         for (var i = 0; i < nums.Length - 2; i++)
         {
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue;
+
+            if (nums[i] + nums[i + 1] + nums[i + 2] > target)
+            {
+                if (Math.Abs(nums[i] + nums[i + 1] + nums[i + 2] - target) < minDiff)
+                {
+                    closestSum = nums[i] + nums[i + 1] + nums[i + 2];
+                }
+                break;
+            }
+            
             int left = i + 1, right = nums.Length - 1;
             
             while (left < right)
