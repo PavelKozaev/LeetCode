@@ -582,4 +582,64 @@ public static class TwoPointers
         
         return closestSum;
     }
+    
+    
+    public static IList<IList<int>> FourSum(int[] nums, int target)
+    {
+        Array.Sort(nums);
+        var result = new List<IList<int>>();
+        var n = nums.Length;
+
+        for (var i = 0; i < n - 3; i++)
+        {
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue;
+            
+            if ((long)nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) 
+                break;
+            
+            if ((long)nums[i] + nums[n - 3] + nums[n - 2] + nums[n - 1] < target) 
+                continue;
+
+            for (var j = i + 1; j < n - 2; j++)
+            {
+                if (j > i + 1 && nums[j] == nums[j - 1])
+                    continue;
+                
+                if ((long)nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target) 
+                    break;
+                
+                if ((long)nums[i] + nums[j] + nums[n - 2] + nums[n - 1] < target) 
+                    continue;
+
+                var left = j + 1;
+                var right = n - 1;
+
+                while (left < right)
+                {
+                    var sum = (long)nums[i] + nums[j] + nums[left] + nums[right];
+
+                    if (sum < target)
+                        left++;
+                    else if (sum > target)
+                        right--;
+                    else
+                    {
+                        result.Add(new List<int> { nums[i], nums[j], nums[left], nums[right] });
+                        
+                        left++;
+                        right--;
+                        
+                        while (left < right && nums[left] == nums[left - 1])
+                            left++;
+                        
+                        while (left < right && nums[right] == nums[right + 1])
+                            right--;
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
 }

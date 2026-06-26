@@ -138,7 +138,15 @@
 
 
 // ThreeSumClosest
-var nums = new[] { -1, 2, 1, -4 };
-var target = 1;
+// var nums = new[] { -1, 2, 1, -4 };
+// var target = 1;
+//
+// TwoPointers.ThreeSumClosest(nums, target);
 
-TwoPointers.ThreeSumClosest(nums, target);
+
+
+// FourSum
+var nums = new[] { 1, 0, -1, 0, -2, 2 };
+var target = 0;
+
+TwoPointers.FourSum(nums, target);
